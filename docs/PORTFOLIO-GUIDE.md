@@ -61,12 +61,15 @@ Open [portfolio.html](../html/portfolio.html) and identify these sections:
 - `.marquee`: the moving skills strip.
 - `#work`: the project grid.
 - `#about`: the short introduction and statistics.
+- `.languages`: the language focus breakdown: HTML 30%, CSS 25%, JavaScript 25%, and Java 20%.
 - `#contact`: the email and social links.
 - `footer`: copyright and navigation back to the top.
 
 The `id` attributes create jump links. For example, `href="#work"` scrolls to the element with `id="work"`.
 
 Classes such as `.project`, `.button`, `.eyebrow`, and `.wrapper` are reusable styling hooks. The same classes appear across multiple pages so the design stays consistent.
+
+The language bars in the About section show the current focus split. Their percentages are written in the HTML and should total 100% when updated.
 
 ## 4. Case Study Pages
 

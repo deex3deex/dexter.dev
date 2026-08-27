@@ -464,6 +464,43 @@ a{
   font:10px 'DM Mono',monospace;
   text-transform:uppercase
 }
+.languages{
+  border-top:1px solid var(--line);
+  margin-top:55px;
+  padding-top:20px;
+  max-width:560px
+}
+.languages-heading,.language>div{
+  display:flex;
+  justify-content:space-between;
+  font:10px 'DM Mono',monospace;
+  text-transform:uppercase
+}
+.languages-heading{
+  color:var(--muted);
+  margin-bottom:20px
+}
+.language{
+  margin-bottom:15px
+}
+.language strong{
+  color:var(--green);
+  font-weight:400
+}
+.language>div{
+  color:var(--paper);
+  margin-bottom:7px
+}
+.language>i{
+  display:block;
+  height:4px;
+  background:var(--line)
+}
+.language b{
+  display:block;
+  height:100%;
+  background:var(--green)
+}
 .contact-section{
   padding:150px 0
 }
