@@ -469,8 +469,28 @@ a{
   padding-top:20px;
   max-width:560px
 }
-.languages-section{
-  padding-bottom:120px
+.terminal-languages{
+  border-color:#303936;
+  margin-top:20px;
+  padding-top:14px;
+  max-width:none
+}
+.terminal-languages .languages-heading{
+  margin-bottom:12px
+}
+.terminal-languages .language{
+  margin-bottom:9px
+}
+.terminal-languages .language>div{
+  color:#a8b3a7;
+  margin-bottom:4px
+}
+.terminal-languages .language>i{
+  height:2px;
+  background:#303936
+}
+.terminal-languages .language strong{
+  color:var(--green)
 }
 .languages-heading,.language>div{
   display:flex;
