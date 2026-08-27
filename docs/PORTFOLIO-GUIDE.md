@@ -6,7 +6,7 @@ This portfolio is a **static website**. It uses HTML for structure and CSS for a
 
 ```text
 portfolio/
-├── index.html              # GitHub Pages entry point, if present
+├── index.html              # GitHub Pages redirect to the homepage
 ├── css/
 │   └── style.css           # Shared styles for every page
 ├── html/
@@ -21,7 +21,7 @@ portfolio/
     └── PORTFOLIO-GUIDE.md  # This guide
 ```
 
-The homepage is `html/portfolio.html`. The root `index.html` entry file is currently absent, so GitHub Pages will need a root entry file to load the homepage automatically.
+The homepage is `html/portfolio.html`. The root `index.html` entry file redirects visitors there so GitHub Pages can load the site automatically.
 
 ## 2. How the Pages Connect
 
@@ -187,7 +187,7 @@ Stop the server with `Ctrl+C`.
 
 ## 8. GitHub Pages
 
-This repository is published from the `main` branch. GitHub Pages normally needs a root `index.html`; the current homepage file is `html/portfolio.html`.
+This repository is published from the `main` branch. GitHub Pages starts at the root `index.html`, which redirects to `html/portfolio.html`.
 
 ```text
 https://deex3deex.github.io/portfolio/
@@ -202,7 +202,7 @@ git commit -m "Describe the change"
 git push origin main
 ```
 
-After pushing, GitHub Pages may take a short time to rebuild. If the homepage shows a 404, check that a root `index.html` entry file exists and that you are using the `/portfolio/` URL.
+After pushing, GitHub Pages may take a short time to rebuild. If the homepage shows a 404, check that the root `index.html` entry file exists and that you are using the `/portfolio/` URL.
 
 ## 9. Important HTML Concepts Used
 
