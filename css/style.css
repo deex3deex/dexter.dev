@@ -638,10 +638,9 @@ a{
   margin-right:20px
 }
 .back-link{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  color:var(--muted)
+  margin-left:auto;
+  color:var(--muted);
+  white-space:nowrap
 }
 @keyframes blink{
   50%{
