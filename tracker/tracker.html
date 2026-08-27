@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple daily meal and nutrition tracker.">
+    <title>meal log // dexter.dev</title>
+    <link rel="stylesheet" href="./tracker.css">
+    <script src="./tracker.js" defer></script>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="app-header">
+            <div><p class="kicker">personal nutrition // 001</p><h1>meal<br><em>log.</em></h1></div>
+            <p class="header-note">A clear little record of what keeps you moving. Your entries stay in this browser.</p>
+        </header>
+        <section class="date-bar" aria-label="Choose tracking date">
+            <div class="date-controls"><button id="previous-day" type="button" aria-label="Previous day">←</button><span id="date-text" class="date-label"></span><button id="next-day" type="button" aria-label="Next day">→</button></div>
+            <button id="today-button" class="today-button" type="button">jump to today</button>
+        </section>
+        <section class="summary-grid" aria-label="Daily nutrition summary">
+            <div class="summary-card"><span class="summary-label">daily intake</span><strong id="total-calories" class="summary-value">0</strong><span class="summary-unit">kcal logged</span></div>
+            <div class="summary-card"><span class="summary-label">protein</span><strong id="total-protein" class="summary-value">0g</strong><span class="summary-unit">today</span></div>
+            <div class="summary-card"><span class="summary-label">carbs</span><strong id="total-carbs" class="summary-value">0g</strong><span class="summary-unit">today</span></div>
+            <div class="summary-card"><span class="summary-label">fat</span><strong id="total-fat" class="summary-value">0g</strong><span class="summary-unit">today</span></div>
+        </section>
+        <main class="content-grid">
+            <section aria-labelledby="logged-heading">
+                <div class="section-heading"><h2 id="logged-heading">Logged meals</h2><span id="meal-count" class="meal-count">0 meals</span></div>
+                <div class="filter-bar" aria-label="Filter meals"><button class="filter-button active" data-filter="all" type="button">all</button><button class="filter-button" data-filter="breakfast" type="button">breakfast</button><button class="filter-button" data-filter="lunch" type="button">lunch</button><button class="filter-button" data-filter="dinner" type="button">dinner</button><button class="filter-button" data-filter="snack" type="button">snack</button></div>
+                <div id="meal-list" class="meal-list" aria-live="polite"></div>
+            </section>
+            <aside id="form-panel" class="panel form-panel">
+                <h2 id="form-title">Log a meal</h2>
+                <form id="meal-form">
+                    <div class="form-group"><label class="form-label" for="meal-name">meal name</label><input id="meal-name" name="name" type="text" placeholder="e.g. avocado toast" required></div>
+                    <div class="form-row"><div class="form-group"><label class="form-label" for="meal-type">type</label><select id="meal-type" name="type"><option value="breakfast">breakfast</option><option value="lunch">lunch</option><option value="dinner">dinner</option><option value="snack">snack</option></select></div><div class="form-group"><label class="form-label" for="meal-date">date</label><input id="meal-date" name="date" type="date" required></div></div>
+                    <div class="form-row"><div class="form-group"><label class="form-label" for="meal-calories">calories</label><input id="meal-calories" name="calories" type="number" min="0" step="1" placeholder="450" required></div><div class="form-group"><label class="form-label" for="meal-protein">protein (g)</label><input id="meal-protein" name="protein" type="number" min="0" step="1" placeholder="20"></div></div>
+                    <div class="form-row"><div class="form-group"><label class="form-label" for="meal-carbs">carbs (g)</label><input id="meal-carbs" name="carbs" type="number" min="0" step="1" placeholder="50"></div><div class="form-group"><label class="form-label" for="meal-fat">fat (g)</label><input id="meal-fat" name="fat" type="number" min="0" step="1" placeholder="15"></div></div>
+                    <button id="submit-meal" class="primary-button" type="submit">Add meal +</button><button id="cancel-edit" class="cancel-button" type="button">cancel edit</button>
+                </form>
+            </aside>
+        </main>
+        <p class="footer-note">meal log // stored locally // made for everyday use</p>
+    </div>
+</body>
+</html>
