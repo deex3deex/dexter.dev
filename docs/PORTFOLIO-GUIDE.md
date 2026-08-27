@@ -6,7 +6,8 @@ This portfolio is a **static website**. It uses HTML for structure and CSS for a
 
 ```text
 portfolio/
-├── index.html              # Homepage and GitHub Pages entry point
+├── index.html              # GitHub Pages redirect to the homepage
+├── portfolio.html          # Homepage
 ├── css/
 │   └── style.css           # Shared styles for every page
 ├── html/
@@ -21,7 +22,7 @@ portfolio/
     └── PORTFOLIO-GUIDE.md  # This guide
 ```
 
-The homepage is at the repository root because GitHub Pages looks there for `index.html`.
+The homepage is at the repository root. GitHub Pages starts at `index.html`, which redirects visitors to `portfolio.html`.
 
 ## 2. How the Pages Connect
 
@@ -47,14 +48,14 @@ The homepage links down into the `html/` folder:
 A case-study page links back up to the homepage:
 
 ```html
-<a href="../index.html#work">Back to selected work</a>
+<a href="../portfolio.html#work">Back to selected work</a>
 ```
 
 `./` means the current folder. `../` means the parent folder. Relative paths are one of the most important concepts in this project.
 
 ## 3. Homepage HTML
 
-Open [index.html](../index.html) and identify these sections:
+Open [portfolio.html](../portfolio.html) and identify these sections:
 
 - `header`: the brand, navigation, and availability status.
 - `.hero`: the main introduction and terminal-style visual.
@@ -169,7 +170,7 @@ Use browser developer tools to inspect an element, see which CSS rule controls i
 
 ## 7. Run It Locally
 
-Because this is a static site, you can open `index.html` directly in a browser. A local server is better because it behaves more like GitHub Pages.
+Because this is a static site, you can open `portfolio.html` directly in a browser. A local server is better because it behaves more like GitHub Pages.
 
 If Python is installed, run this from the project folder:
 
@@ -187,7 +188,7 @@ Stop the server with `Ctrl+C`.
 
 ## 8. GitHub Pages
 
-This repository is published from the `main` branch. GitHub Pages serves the root `index.html` at:
+This repository is published from the `main` branch. GitHub Pages serves the root `index.html` redirect, which opens the homepage at:
 
 ```text
 https://deex3deex.github.io/portfolio/
@@ -202,7 +203,7 @@ git commit -m "Describe the change"
 git push origin main
 ```
 
-After pushing, GitHub Pages may take a short time to rebuild. If the homepage shows a 404, first check that `index.html` is still at the repository root and that you are using the `/portfolio/` URL.
+After pushing, GitHub Pages may take a short time to rebuild. If the homepage shows a 404, first check that both `index.html` and `portfolio.html` are at the repository root and that you are using the `/portfolio/` URL.
 
 ## 9. Important HTML Concepts Used
 
