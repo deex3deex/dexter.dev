@@ -467,6 +467,15 @@ a{
 .contact-section{
   padding:150px 0
 }
+.js .reveal-section{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .8s ease,transform .8s ease
+}
+.js .reveal-section.is-visible{
+  opacity:1;
+  transform:translateY(0)
+}
 .contact-section h2{
   font-size:clamp(44px,7vw,85px);
   font-weight:500;
@@ -483,6 +492,31 @@ a{
   color:var(--green);
   font-size:24px;
   margin-left:30px
+}
+.email-actions{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap
+}
+.copy-email{
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--muted);
+  padding:9px 11px;
+  cursor:pointer;
+  font:10px 'DM Mono',monospace;
+  text-transform:uppercase;
+  transition:color .2s ease,border-color .2s ease
+}
+.copy-email:hover,.copy-email:focus-visible{
+  color:var(--green);
+  border-color:var(--green)
+}
+.copy-status{
+  color:var(--green);
+  font:10px 'DM Mono',monospace;
+  text-transform:uppercase
 }
 .site-footer{
   border-top:1px solid var(--line);
@@ -667,6 +701,9 @@ a{
   .contact-email span{
     margin-left:10px
   }
+  .email-actions{
+    gap:14px
+  }
   .site-footer{
     gap:15px;
     flex-wrap:wrap
@@ -691,6 +728,13 @@ a{
     transform:none;
     margin-left:auto;
     font-size:10px
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .js .reveal-section{
+    opacity:1;
+    transform:none;
+    transition:none
   }
 }
 @media(max-width:700px){
