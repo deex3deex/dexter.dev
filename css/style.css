@@ -486,6 +486,7 @@ a{
   margin-bottom:4px
 }
 .terminal-languages .language>i{
+  display:block;
   height:2px;
   background:#303936
 }
