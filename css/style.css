@@ -1276,10 +1276,10 @@ a:focus-visible{
 }
 @keyframes void-shift{
   0%,100%{
-    transform:perspective(500px) rotateX(35deg) scale(1.4) rotateY(0deg)
+    transform:perspective(500px) rotateX(35deg) scale(1.4) rotateY(-7deg) translateX(-8px)
   }
   50%{
-    transform:perspective(500px) rotateX(35deg) scale(1.4) rotateY(8deg)
+    transform:perspective(500px) rotateX(35deg) scale(1.4) rotateY(12deg) translateX(8px)
   }
 }
 @keyframes case-enter{
@@ -1448,19 +1448,19 @@ a:focus-visible{
 }
 @keyframes orbit-drift{
   0%,100%{
-    transform:rotate(-25deg) translate(0,0) scale(1)
+    transform:rotate(-30deg) translate(-14px,6px) scale(.94)
   }
   50%{
-    transform:rotate(-19deg) translate(10px,-6px) scale(1.04)
+    transform:rotate(-16deg) translate(14px,-10px) scale(1.08)
   }
 }
 @keyframes signal-pulse{
   0%,100%{
-    transform:scaleY(.82);
-    opacity:.6
+    transform:scaleY(.58);
+    opacity:.45
   }
   50%{
-    transform:scaleY(1.12);
+    transform:scaleY(1.3);
     opacity:1
   }
 }
